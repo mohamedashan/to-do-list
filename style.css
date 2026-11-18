@@ -134,3 +134,21 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0.35rem 1rem rgba(39, 52, 90, 0.08);
 }
+
+
+.edit-btn {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.edit-btn:hover,
+.edit-btn:focus {
+  color: var(--primary-dark);
+  background: #f0f0ff;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(91, 92, 226, 0.3);
+  outline-offset: 2px;
+}
