@@ -40,6 +40,7 @@ function renderTasks() {
     item.innerHTML = `
       <input class="task-check" type="checkbox" aria-label="Mark task as complete" ${task.completed ? 'checked' : ''}>
       <span class="task-text">${escapeHtml(task.text)}</span>
+      <button class="btn btn-sm edit-btn edit-task" type="button" aria-label="Edit task">Edit</button>
       <button class="btn btn-sm delete-btn delete-task" type="button" aria-label="Delete task">&times;</button>
     `;
 
@@ -47,6 +48,15 @@ function renderTasks() {
       task.completed = !task.completed;
       saveTasks();
       renderTasks();
+    });
+
+    item.querySelector('.edit-task').addEventListener('click', () => {
+      const updatedText = window.prompt('Edit task', task.text)?.trim();
+      if (updatedText) {
+        task.text = updatedText;
+        saveTasks();
+        renderTasks();
+      }
     });
 
     item.querySelector('.delete-task').addEventListener('click', () => {
