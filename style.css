@@ -152,3 +152,24 @@ input:focus-visible {
   outline: 3px solid rgba(91, 92, 226, 0.3);
   outline-offset: 2px;
 }
+
+
+@media (max-width: 576px) {
+  .input-group {
+    flex-wrap: wrap;
+  }
+
+  .input-group .form-control,
+  .input-group .btn {
+    width: 100%;
+    border-radius: 0.5rem !important;
+  }
+
+  .input-group .btn {
+    margin-top: 0.5rem;
+  }
+
+  .task-item {
+    padding: 0.75rem;
+  }
+}
