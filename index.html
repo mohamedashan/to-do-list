@@ -19,9 +19,10 @@
 
         <form id="task-form" class="input-group mt-4" novalidate>
           <label class="visually-hidden" for="task-input">Add a task</label>
-          <input id="task-input" class="form-control form-control-lg" type="text" maxlength="120" placeholder="What needs to be done?" autocomplete="off" required />
+          <input id="task-input" class="form-control form-control-lg" type="text" maxlength="120" placeholder="What needs to be done?" autocomplete="off" aria-describedby="task-input-help" required />
           <button class="btn btn-primary px-4" type="submit">Add task</button>
         </form>
+        <div id="task-input-help" class="form-text">Press Enter to add a task.</div>
 
         <div class="toolbar d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
           <div class="btn-group" role="group" aria-label="Filter tasks">
