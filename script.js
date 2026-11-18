@@ -95,3 +95,13 @@ clearCompletedButton.addEventListener('click', () => {
 });
 
 renderTasks();
+
+
+// Press "/" from anywhere to quickly focus the task input.
+document.addEventListener('keydown', (event) => {
+  const tagName = document.activeElement?.tagName.toLowerCase();
+  if (event.key === '/' && tagName !== 'input' && tagName !== 'textarea') {
+    event.preventDefault();
+    taskInput.focus();
+  }
+});
