@@ -120,3 +120,17 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+
+.app-footer {
+  opacity: 0.8;
+}
+
+.task-item {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.task-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.35rem 1rem rgba(39, 52, 90, 0.08);
+}
